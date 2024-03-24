@@ -3,7 +3,7 @@ import { ACTIONS } from "../actions";
 const initialState = 0;
 
 // สร้าง Reducers (ฟังก์ชันของ reducers จะรับ state และ action เป็น arguments)
-export const counterReducer = (state = initialState, action) => {
+export const counterReducer = (state = initialState, action: { type: any; score: number }) => {
   switch (action.type) {
     case ACTIONS.INCREMENT:
       return state + action.score;

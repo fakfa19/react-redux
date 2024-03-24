@@ -1,11 +1,16 @@
 import "./App.css";
 
-import React from "react";
 import { connect } from "react-redux";
 
 import { increment, decrement } from "./actions"; // Import Redux actions
+import { Action, Dispatch } from "redux";
 
-const App = ({ counter, dispatch }) => (
+interface Props {
+  counter: number;
+  dispatch: Dispatch<Action<string>>;
+}
+
+const App = ({ counter, dispatch }: Props) => (
   <div className="content-center">
     <div>
       <div className="columns column is-12">
@@ -40,7 +45,7 @@ const App = ({ counter, dispatch }) => (
 );
 
 // mapStateToProps เป็น function ที่รับค่า state ปัจจุบัน และ return เป็น props ส่งไปหา Component
-const mapStateToProps = function (state) {
+const mapStateToProps = function (state: any) {
   return {
     counter: state.counterReducer || 0,
   };

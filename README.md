@@ -41,13 +41,13 @@ This will start the application in development mode. Open http://localhost:3000 
 ```lua
 src/
 |-- actions/
-|   |-- couterAction.js
-|   |-- index.js
+|   |-- couterAction.ts
+|   |-- index.ts
 |-- reducers/
-|   |-- counterReducer.js
-|   |-- index.js
+|   |-- counterReducer.ts
+|   |-- index.ts
 |-- store/
-|   |-- index.js
-|-- App.js
-|-- index.js
+|   |-- index.ts
+|-- App.tsx
+|-- index.tsx
 ```
